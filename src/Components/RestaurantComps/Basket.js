@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+import data from '../../data';
+import Dropdown from './Dropdown';
 
 export default function Main(props) {
+
+    const {library} = data;
+
+    const [selected, setSelected] = useState("Select your library seat");
 
     const { cartItems, onAdd, onRemove } = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
@@ -11,11 +18,12 @@ export default function Main(props) {
     const BasketContainer = styled.aside`
         background: ${({ theme }) => theme.colors.bg3};
         box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
-        height: 900px;
         width: 414px;
         left: 1026px;
         top: 2px;
         border-radius: 0px;
+        overflow: hidden;
+        overflow-y: scroll;
     `
 
     const BasketHeading = styled.h1`
@@ -32,7 +40,7 @@ export default function Main(props) {
 
     const InnerBasketContainer = styled.div`
         margin: 40px;
-        height: 650px;
+        height: 100%;
     `
 
     const EmptyMessage = styled.body`
@@ -201,16 +209,24 @@ export default function Main(props) {
         backdrop-filter: blur(8px);
         border-radius: 14px;
         margin-top: 28px;
+        margin-bottom: 40px;
         height: 48px;
         border: none;
         color: ${({ theme }) => theme.colors.bg3};
-        font-family: ${({theme}) => theme.typography.font2.fontFamily};
+        font-family: ${({ theme }) => theme.typography.font2.fontFamily};
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
         width: 100%;
         cursor: pointer;
     `
+
+    const LinkStyle = {
+        textDecoration: "none",
+        color: 'white'
+    };
+
+
 
     return (
         <BasketContainer>
@@ -221,32 +237,37 @@ export default function Main(props) {
                 </div>
                 <ItemsandSummary>
                     {cartItems.map((item) => (
-                            <div key={item.id}>
-                                <ItemContainer>
-                                    <Row>
-                                        <div>
-                                            <img src={item.image} alt={item.alt} />
-                                        </div>
-                                        <Column>
-                                            <NamePrice>
-                                                <Name>{item.name}</Name>
-                                                <Price>£{item.price.toFixed(2)}</Price>
-                                            </NamePrice>
-                                            <ButtonDiv>
-                                                <RemoveButton onClick={() => onRemove(item)}>
-                                                    <img src='../../images/minus.svg' alt='' />
-                                                </RemoveButton>
-                                                <Quantity>{item.qty}</Quantity>
-                                                <AddButton onClick={() => onAdd(item)}>
-                                                    <img src='../../images/plus.svg' alt='' />
-                                                </AddButton>
-                                            </ButtonDiv>
-                                        </Column>
-                                    </Row>
-                                </ItemContainer>
-                            </div>
-                        ))}
+                        <div key={item.id}>
+                            <ItemContainer>
+                                <Row>
+                                    <div>
+                                        <img src={item.image} alt={item.alt} />
+                                    </div>
+                                    <Column>
+                                        <NamePrice>
+                                            <Name>{item.name}</Name>
+                                            <Price>£{item.price.toFixed(2)}</Price>
+                                        </NamePrice>
+                                        <ButtonDiv>
+                                            <RemoveButton onClick={() => onRemove(item)}>
+                                                <img src='../../images/minus.svg' alt='' />
+                                            </RemoveButton>
+                                            <Quantity>{item.qty}</Quantity>
+                                            <AddButton onClick={() => onAdd(item)}>
+                                                <img src='../../images/plus.svg' alt='' />
+                                            </AddButton>
+                                        </ButtonDiv>
+                                    </Column>
+                                </Row>
+                            </ItemContainer>
+                        </div>
+                    ))}
+
                     {cartItems.length !== 0 && (
+                        <>
+                        <div>
+                            <Dropdown library={library} selected={selected} setSelected={setSelected}></Dropdown>
+                        </div>
                         <CartSummary>
                             <SubtotalDiv>
                                 <div>Subtotal</div>
@@ -261,8 +282,11 @@ export default function Main(props) {
                                 <OrderTotal>Order Total</OrderTotal>
                                 <OrderTotalPrice>£{totalPrice.toFixed(2)}</OrderTotalPrice>
                             </OrderTotalDiv>
-                            <OrderButton>Order</OrderButton>
+
+                            <OrderButton><Link to='/orders' style={LinkStyle}>Place Order</Link></OrderButton>
+
                         </CartSummary>
+                        </>
                     )}
                 </ItemsandSummary>
             </InnerBasketContainer>

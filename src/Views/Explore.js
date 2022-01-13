@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../Components/Header";
+import Header from "../Components/ExploreComps/Header";
 import PopularRestaurants from '../Components/ExploreComps/PopularRestaurants';
 import { InnerContainer } from "../Components/Styles/InnerContainer.styled";
 import data from '../data';

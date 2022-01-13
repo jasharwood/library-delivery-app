@@ -69,12 +69,20 @@ const data = {
             image: side2,
         },
         {
-            id: '6',
+            id: '7',
             name: 'Sweet Potato Fries',
             desc: 'Delicious sweet potato fries seasoned with a special herb an...',
             alt: 'Sweet Potato Fries',
             price: 3.95,
             image: side2,
+        },
+        {
+            id: '8',
+            name: 'Seasoned Wedges',
+            desc: 'Freshly made wedges seasoned with our own special blend of...',
+            alt: 'Seasoned Wedges',
+            price: 3.45,
+            image: side1,
         },
     ],
 
@@ -155,6 +163,149 @@ const data = {
             alt: 'The Artisan',
             image: restaurant9,
         },
+    ],
+
+
+
+
+    library: [
+        {
+            id: '1',
+            floor: 'Lower Ground Floor',
+            number: '0201',
+        },
+        {
+            id: '2',
+            floor: 'Lower Ground Floor',
+            number: '0202',
+        },
+        {
+            id: '3',
+            floor: 'Lower Ground Floor',
+            number: '0203',
+        },
+        {
+            id: '4',
+            floor: 'Lower Ground Floor',
+            number: '0204',
+        },
+        {
+            id: '5',
+            floor: 'Lower Ground Floor',
+            number: '0205',
+        },
+        {
+            id: '6',
+            floor: 'Lower Ground Floor',
+            number: '0206',
+        },
+        {
+            id: '7',
+            floor: 'Lower Ground Floor',
+            number: '0207',
+        },
+        {
+            id: '8',
+            floor: 'Lower Ground Floor',
+            number: '0208',
+        },
+        {
+            id: '9',
+            floor: 'Lower Ground Floor',
+            number: '0209',
+        },
+        {
+            id: '10',
+            floor: 'Lower Ground Floor',
+            number: '0210',
+        },
+        {
+            id: '11',
+            floor: 'Lower Ground Floor',
+            number: '0211',
+        },
+
+        {
+            id: '12',
+            floor: 'First Floor',
+            number: '1356',
+        },
+        {
+            id: '13',
+            floor: 'First Floor',
+            number: '1357',
+        },
+        {
+            id: '14',
+            floor: 'First Floor',
+            number: '1358',
+        },
+        {
+            id: '15',
+            floor: 'First Floor',
+            number: '1359',
+        },
+        {
+            id: '16',
+            floor: 'Second Floor',
+            number: '2104',
+        },
+        {
+            id: '17',
+            floor: 'Second Floor',
+            number: '2105',
+        },
+        {
+            id: '18',
+            floor: 'Second Floor',
+            number: '2106',
+        },
+        {
+            id: '19',
+            floor: 'Second Floor',
+            number: '2108',
+        },
+        {
+            id: '20',
+            floor: 'Second Floor',
+            number: '2109',
+        },
+        {
+            id: '21',
+            floor: 'Third Floor',
+            number: '3201',
+        },
+        {
+            id: '22',
+            floor: 'Third Floor',
+            number: '3202',
+        },
+        {
+            id: '23',
+            floor: 'Third Floor',
+            number: '3203',
+        },
+        {
+            id: '24',
+            floor: 'Third Floor',
+            number: '3204',
+        },
+        {
+            id: '25',
+            floor: 'Third Floor',
+            number: '3205',
+        },
+        {
+            id: '26',
+            floor: 'Third Floor',
+            number: '3206',
+        },
+        {
+            id: '27',
+            floor: 'Third Floor',
+            number: '3207',
+        },
+        
     ],
 };
 
