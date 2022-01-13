@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "./Components/Styles/GlobalStyles";
+import theme from "./Components/Styles/theme.js";
+import { OuterContainer } from "./Components/Styles/OuterContainer.styled";
+import Nav from './Components/Nav';
+import Explore from './Views/Explore';
+import Orders from './Views/Orders';
+import Restaurant from './Views/Restaurant';
+import {
+  Routes,
+  Route,
+  useLocation
+} from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <ThemeProvider theme={theme}>
+      <GlobalStyles />
+      <OuterContainer>
+        <Nav />
+        <Routes>
+            <Route path='/explore' element={<Explore />} />
+            <Route path='/orders' element={<Orders />} />
+            <Route path='/restaurant' element={<Restaurant />} />
+          </Routes>
+      </OuterContainer>
+    </ThemeProvider>
+  )
 }
 
 export default App;
