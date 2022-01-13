@@ -1,7 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import Restaurant from "./Restaurant";
 
-const PopularRestaurants = ({heading,data}) => {
+export default function PopularRestaraunts(props) {
+
+    const { restaurant } = props;
 
     const PopularContainer = styled.div`
         margin-top: 55px;
@@ -23,61 +26,21 @@ const PopularRestaurants = ({heading,data}) => {
     const PopularWrapper = styled.div`
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
+        row-gap: 32px;
         margin: 0;
         padding: 0;
-    `
-
-    const RestaurantCard = styled.div`
-       width: 370px;
-    `
-
-    const RestaurantImg = styled.img`
-        border-radius: 8px;
-        margin-bottom: 14px;
-    `
-
-    const RestaurantInfo = styled.div`
-    `
-
-    const RestaurantTitle = styled.h2`
-        font-family: ${({theme}) => theme.typography.font2.fontFamily};
-        font-style: normal;
-        font-weight: bold;
-        font-size: 16px;
-        line-height: 22px;
-        color: ${({theme}) => theme.colors.text1};
-        margin: 0 0 6px 0;
-    `
-
-    const RestaurantDesc = styled.body`
-        font-family: BlissLight;
-        font-style: normal;
-        font-weight: 300;
-        font-size: 14px;
-        line-height: 15px;
-        color: ${({theme}) => theme.colors.text2};
     `
 
 
     return (
         <PopularContainer>
-            <PopularHeading>{heading}</PopularHeading>
+            <PopularHeading>POPULAR</PopularHeading>
             <PopularWrapper>
-                {data.map((restaurant, index) => {
-                    return (
-                        <RestaurantCard key={index}>
-                            <RestaurantImg src={restaurant.img} alt={restaurant.alt} />
-                            <RestaurantInfo>
-                                <RestaurantTitle>{restaurant.name}</RestaurantTitle>
-                                <RestaurantDesc>{restaurant.desc}</RestaurantDesc>
-                            </RestaurantInfo>
-                        </RestaurantCard>
-                    )
-                }
-                )}
+                {restaurant.map((restaurant) => (
+                        <Restaurant key={restaurant.id} restaurant={restaurant}></Restaurant>
+                    ))} 
             </PopularWrapper>
         </PopularContainer>
     )
-}
-
-export default PopularRestaurants;
+};
