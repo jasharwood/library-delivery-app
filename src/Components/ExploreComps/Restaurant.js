@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import DeliveryTime from "./DeliveryTime";
 
 export default function Restaurant(props) {
     const {restaurant} = props;
@@ -36,10 +37,31 @@ export default function Restaurant(props) {
         color: ${({theme}) => theme.colors.text2};
     `
 
+    const DeliveryTimeDiv = styled.div`
+        height: 36px;
+        width: 59px;
+        left: 295px;
+        top: 16px;
+        border-radius: 8px;
+        padding: 7px, 9px, 3px, 9px;
+        position: absolute;
+        background: #FFFFFF;
+        box-shadow: 0px 8px 18px -6px rgba(24, 39, 75, 0.12), 0px 12px 42px -4px rgba(24, 39, 75, 0.12);
+        border-radius: 8px;
+    `
+    const Div = styled.div`
+        position: relative;
+    `
+
 
     return (
         <RestaurantCard>
-            <Image src={restaurant.image} alt={restaurant.alt}></Image>
+            <Div>
+                <Image src={restaurant.image} alt={restaurant.alt}></Image>
+                <DeliveryTimeDiv>
+                    <DeliveryTime min={15} max={20} />
+                </DeliveryTimeDiv>
+            </Div>
             <RestaurantInfo>
                <Name>{restaurant.name}</Name>
                 <Desc>{restaurant.desc}</Desc>
