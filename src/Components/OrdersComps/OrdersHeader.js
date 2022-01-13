@@ -25,7 +25,7 @@ function OrdersHeader() {
     return (
         <HeaderContainer>
             <StyledHeader>
-                ORDERS
+                MY ORDERS
             </StyledHeader>
         </HeaderContainer>
     )

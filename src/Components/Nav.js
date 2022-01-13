@@ -19,10 +19,11 @@ function Nav() {
 
     const Logo = styled.img`
         margin-bottom: 46px;
+        max-width: 68px;
     `;
 
     const Icons = styled.div`
-        height: 240px;
+        height: 180px;
         width: 48px;
         left: 30px;
         top: 113px;
@@ -56,12 +57,9 @@ function Nav() {
     const Notification = styled.img`
     `;
 
-    const Buy = styled.img`
-    `;
-
     return (
         <NavBar>
-            <Logo src='./images/logo.svg' alt=''/>
+            <Logo src='./images/logo.png' alt=''/>
             <Icons>
                 <IconContainer>
                     <Link to='/explore'>
@@ -75,9 +73,6 @@ function Nav() {
                 </IconContainer>
                 <IconContainer>
                     <Notification src='./images/notification.svg' alt=''/> 
-                </IconContainer>
-                <IconContainer>
-                    <Buy src='./images/buy.svg' alt=''/>
                 </IconContainer>
             </Icons>
         </NavBar>

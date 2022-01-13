@@ -3,12 +3,19 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import data from '../../data';
 import Dropdown from './Dropdown';
+import { OrderSuccessModal } from "./OrderSuccessModal";
 
 export default function Main(props) {
 
     const {library} = data;
 
     const [selected, setSelected] = useState("Select your library seat");
+
+    const [showModal, setShowModal] = useState(false);
+
+    const openModal = () => {
+        setShowModal(prev => !prev)
+    }
 
     const { cartItems, onAdd, onRemove } = props;
     const itemsPrice = cartItems.reduce((a, c) => a + c.price * c.qty, 0);
@@ -283,8 +290,8 @@ export default function Main(props) {
                                 <OrderTotalPrice>£{totalPrice.toFixed(2)}</OrderTotalPrice>
                             </OrderTotalDiv>
 
-                            <OrderButton><Link to='/orders' style={LinkStyle}>Place Order</Link></OrderButton>
-
+                            <OrderButton onClick={openModal} style={LinkStyle}>Place Order</OrderButton>
+                            <OrderSuccessModal showModal={showModal} setShowModal={setShowModal}></OrderSuccessModal>
                         </CartSummary>
                         </>
                     )}

@@ -18,6 +18,13 @@ import restaurant6 from './assets/images/restaurant6.png';
 
 import { Link } from 'react-router-dom';
 
+const LinkStyle = {
+    textDecoration: "none",
+    color: 'black'
+};
+
+
+
 const data = {
     products: [
         {
@@ -118,8 +125,6 @@ const data = {
 
 
 
-
-
     recommended: [
         {
             id: '4',
@@ -130,7 +135,7 @@ const data = {
         },
         {
             id: '5',
-            name: <Link to='/restaurant'>Patty Shack</Link>,
+            name: <Link to='/restaurant' style={LinkStyle}>Patty Shack</Link>,
             desc: 'Burgers, chips and onion rings',
             alt: 'Patty Shack',
             image: restaurant5,
