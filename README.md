@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Solent Library Food Delivery Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br><br>
 
-## Available Scripts
+## Project Description 
 
-In the project directory, you can run:
+<br>
 
-### `npm start`
+The Library Food Delivery App is a single web application created for Solent University. It aims to solve the problem that many students face - getting hungry or needing a coffee mid-way through a library study session and having to leave to purchase food/drinks, which leads to a disruption in their workflow and/or losing their seat. The web app allows students to select a restaurant from the list of restaurants on the explore page, view the individual restaurant and add food items to their cart. The quantity of these food items can be increased and descreased, and a library seat can be selected from the drop down list. The student can then place the order and a pop-up appears to confirm that their order has gone through.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The web app was developed using React JS and I chose to install styled-components to effectively style each component. I faced multiple challenges throughout this project, the main one being that the original design was far too complicated for my React JS capabilities. I ended up focusing on 4 of the most important requirements (delivery times, plenty of food choices, a good user experience and easy navigation) and so some of the design features needed to be simplified to ensure these requirements were implemented.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+<br>
 
-### `npm test`
+**My Hosted Website:** Website is hosted [here.](https://library-delivery-application.web.app/explore)  
+**My GitHub Repo:** GitHub Repo can be found [here.](https://github.com/jasharwood/library-delivery-app)  
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<br><br>
 
-### `npm run build`
+## How To Build My Website
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository   
+```
+$ git clone https://github.com/jasharwood/library-delivery-app.git
+```
+<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Open the resulting library-delivery-app in VS Code
 
-### `npm run eject`
+<br>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Install the following dependencies;  
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```
+npm install
+```
+```
+npm install --save styled-components
+```
+```
+npm install react-router-dom
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<br>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+4. You can then start the application 
+```
+npm run start
+```
 
-## Learn More
+<br><br>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Future Implementations 
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Add search bar to seat selection drop down
+- Add ability to view more details for each food item
+- Add a button to remove items from the cart rather than reducing the quantity to 0
+- Add payment functionality 
+- Add order tracking
+- Add filters (delivery time, allergens, price)
+- Add offers e.g. meal deals
+- Add text under each icon
+- Add ability to favourite restaurants
+- Finish the orders page
+- Make the web app responsive

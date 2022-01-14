@@ -20,9 +20,9 @@ function App() {
       <OuterContainer>
         <Nav />
         <Routes>
-            <Route path='/explore' element={<Explore />} />
-            <Route path='/orders' element={<Orders />} />
-            <Route path='/restaurant' element={<Restaurant />} />
+            <Route path='/Explore' element={<Explore />} />
+            <Route path='/Orders' element={<Orders />} />
+            <Route path='/Restaurant' element={<Restaurant />} />
           </Routes>
       </OuterContainer>
     </ThemeProvider>

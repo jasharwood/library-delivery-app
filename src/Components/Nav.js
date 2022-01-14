@@ -62,17 +62,17 @@ function Nav() {
             <Logo src='./images/logo.png' alt=''/>
             <Icons>
                 <IconContainer>
-                    <Link to='/explore'>
-                        <Home src='./images/homebold.svg' alt=''/>
+                    <Link to='/Explore'>
+                        <Home src='./images/Homebold.svg' alt=''/>
                     </Link>
                 </IconContainer>
                 <IconContainer>
-                    <Link to="/orders">
-                        <Ticket src='./images/ticket.svg' alt='' />
+                    <Link to="/Orders">
+                        <Ticket src='./images/Ticket.svg' alt='' />
                     </Link>
                 </IconContainer>
                 <IconContainer>
-                    <Notification src='./images/notification.svg' alt=''/> 
+                    <Notification src='./images/Notification.svg' alt=''/> 
                 </IconContainer>
             </Icons>
         </NavBar>

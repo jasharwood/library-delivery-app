@@ -87,7 +87,7 @@ function Header() {
                     <SearchInput placeholder="Search" type="text"></SearchInput>
                 </SearchBar>
                 <FilterButton>
-                    <FilterIcon src='./images/filter.svg' alt=''/>
+                    <FilterIcon src='./images/Filter.svg' alt=''/>
                 </FilterButton>
             </SearchContainer>
         </HeaderContainer>
